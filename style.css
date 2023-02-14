@@ -1,0 +1,189 @@
+h1 {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #ddd;
+}
+
+#add-employee {
+  margin-top: 3%;
+  border: groove;
+  border-color: aliceblue;
+}
+
+#add-header {
+  background-color: white;
+}
+
+#employee-info {
+  display: flex;
+  padding: 2%;
+  background-color: #a8b9ba;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+}
+
+#empform {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  /* margin: 0% 10%; */
+  padding-top: 1%;
+  padding-bottom: 1%;
+  align-items: center;
+  background-color: #a8b9ba;
+  font-weight: bold;
+  font-size: large;
+  transition: width 0.4s ease-in-out;
+}
+
+#warning {
+  display: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+
+.formaction {
+  display: flex;
+  padding-top: 1.7%;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+#submitbtn {
+  padding: 5px 40px;
+  font-size: 80%;
+  font-weight: bold;
+}
+
+#resetbtn {
+  padding: 5px 40px;
+  font-size: 80%;
+  font-weight: bold;
+}
+
+#empid,
+#empname,
+#updateid,
+#updatename,
+#updateage,
+#updategender {
+  padding: 3%;
+}
+
+#empage {
+  padding: 8%;
+}
+
+#empgender {
+  padding: 4%;
+}
+
+#update-employee {
+  display: none;
+  position: fixed;
+  background-color: #4b7c83;
+  width: 36%;
+  margin-left: 32%;
+  display: none;
+  margin-top: -15%;
+
+}
+
+
+#update-info {
+  padding: 2%;
+  background-color: #ddd;
+  ;
+}
+
+#updateform {
+  justify-content: space-around;
+  margin: 0% 20%;
+  padding: 2% 10%;
+  background-color: #ddd;
+  align-items: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+#update-header {
+  background-color: #4b7c83;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+#update-div {
+  display: flex;
+  margin-top: 4%;
+  padding: 2%;
+}
+
+#updateaction {
+  margin-left: 15%;
+}
+
+#update-btn {
+  padding-left: 10px;
+  padding-right: 10%;
+  font-size: 80%;
+}
+
+#cancel-btn {
+  padding-left: 10px;
+  padding-right: 16%;
+  margin-left: 10%;
+  font-size: 80%;
+
+}
+
+.display-info {
+  margin-top: 3%;
+}
+
+.employees-table {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#employee-List {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px;
+  justify-content: center;
+  text-align: center;
+}
+
+#employee-List tr:nth-child(even) {
+  background-color: #daf4fa;
+}
+
+#employee-List td,
+#employee-List th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: rgb(174, 192, 199);
+}
+
+#employee-List td:hover {
+  background-color: #ddd;
+}
+#action{
+  width:100% ;
+  display:flex; 
+  justify-content:space-evenly;
+}
+#edit-btn{
+  padding-left: 4%; padding-right: 4%;
+  font-weight: bold;
+}
+
+#delete-btn{
+  padding-left: 4%; padding-right: 4%;
+  font-weight: bold;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="add-employee">
+        <div>
+            <h1 id="add-header">Add Employee Details</h1>
+        </div>
+
+        <div id="employee-info">
+            <form id="empform" onsubmit="onFormSubmit()" autocomplete="off">
+                <div>
+                    <label for="empid">Id</label>
+                    <br>
+                    <input type="number" id="empid" min="0" oninput="validity.valid||(value='');" required>
+
+                    <p id="warning">Id already exist! Please enter another Id</p>
+                </div>
+
+                <div>
+                    <label for="empname">Name</label>
+                    <br>
+                    <input type="text" id="empname" name="empname" pattern="[A-Za-z ]{1,}"
+                        title="Only Alphabets with spaces is allowed" required>
+                </div>
+
+                <div>
+                    <label for="empage">Age</label>
+                    <br>
+                    <input type="number" id="empage" min="19" max="60" required>
+                </div>
+                <div>
+                    <label for="empgender">Gender</label>
+                    <br>
+                    <select id="empgender" required>
+                        <option value="" selected disabled>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Prefer Not to Say</option>
+                    </select>
+                </div>
+
+                <div class="formaction">
+                    <div id="submit"><input id="submitbtn" type="submit" value="Add"></div>
+                </div>
+                <div class="formaction">
+                    <div id="reset"><input id="resetbtn" type="reset" value="Reset"></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div id="update-employee">
+        <div>
+            <h1 id="update-header">Update Employee Details</h1>
+        </div>
+
+        <div id="update-info">
+
+            <form id="updateform" onsubmit="update()" autocomplete="off">
+                <div style="padding: 2%;">
+                    <label for="updateid">Id</label>
+                    <br>
+                    <input type="number" name="" id="updateid" min="0" oninput="validity.valid||(value='');" required>
+                    <p id="updatewarning" style="display:none; padding: 0%;
+                    margin: 0%;">Id already exist! Please enter another Id</p>
+                </div>
+                <div style="padding: 2%;">
+                    <label for="updatename">Name</label>
+                    <br>
+                    <input type="text" id="updatename" name="empname" pattern="[A-Za-z ]{1,}"
+                        title="Only Alphabets with spaces is allowed" required>
+                </div>
+
+                <div style="padding: 2%;">
+                    <label for="upadateage">Age</label>
+                    <br>
+                    <input type="number" id="updateage" min="19" max="60" required>
+                </div>
+                <div style="padding: 2%;">
+                    <label for="updategender">Gender</label>
+                    <br>
+                    <select id="updategender" required>
+                        <option value="" selected disabled>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Prefer Not to Say</option>
+                    </select>
+                </div>
+
+                <div id="update-div">
+                    <div class="updateaction">
+                        <div id="update">
+                            <input id="update-btn" type="submit" value="Update">
+                        </div>
+                    </div>
+                    <div class="updateaction" style="margin-left: 5%;">
+                        <div id="cancel">
+                            <input id="cancel-btn" onclick="cancel()" type="button" value="Cancel">
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+
+    <div class="display-info">
+        <div>
+            <h1 style="margin-left: 15%;
+            margin-right: 15%;">Employee Data</h1>
+        </div>
+
+        <div class="employees-table">
+            <table class="list" id="employee-List">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
